@@ -11,7 +11,6 @@ public class LoginPageTest extends BaseTest {
     List<WebDriver> driverSetupList;
     private final By checkBtn = By.name("_password");
 
-
     public LoginPageTest() {
 
         driverSetup = new DriverSetup();
@@ -21,7 +20,7 @@ public class LoginPageTest extends BaseTest {
         loginPage = new LoginPage(driverSetupList);
 
     }
-
+    // enuygun.com anasayfasi acildi. Acilan sayfanin url'i ile, istedigimiz url'nin uyumlulugu kontrol edildi.
     public void checkOpenMainPage() {
 
         driverSetup.open("https://www.enuygun.com/");
@@ -39,8 +38,8 @@ public class LoginPageTest extends BaseTest {
 
     }
 
-    /* Login sayfasi acilarak, sifre giris kisminin kullanilabilir olup olmadigi kontrol edildi.
-       Dolayisiyla login sayfasini ac komutu verdigimizde, dogru sayfanin acildigini gormus olduk.*/
+    /* Login sayfasi acildi. Sifre kutusunun kullanilabilir olup olmadigini kontrol ederek
+       dogru sayfada oldugumuzu onayladik.*/
     public boolean checkOpenLoginPage() {
 
         loginPage.openLoginPage();

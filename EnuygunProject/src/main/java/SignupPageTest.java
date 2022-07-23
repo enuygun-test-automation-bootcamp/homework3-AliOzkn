@@ -22,7 +22,7 @@ public class SignupPageTest extends BaseTest {
 
     }
 
-    // enuygun.com anasayfasi acildi.
+    // enuygun.com anasayfasi acildi. Acilan sayfanin url'i ile, istedigimiz url'nin uyumlulugu kontrol edildi.
     public void checkOpenMainPage() {
 
         driverSetup.open("https://www.enuygun.com/");
@@ -40,8 +40,8 @@ public class SignupPageTest extends BaseTest {
 
     }
 
-    /* Signup sayfasi acilarak, email giris kisminin kullanilabilir olup olmadigi kontrol edildi.
-       Dolayisiyla signup sayfasini ac komutu verdigimizde, dogru sayfanin acildigini gormus olduk.*/
+    /* Signup sayfasi acildi. Email kutusunun kullanilabilir olup olmadigini kontrol ederek,
+       dogru sayfada oldugumuzu onayladik.*/
     public boolean checkOpenSignupPage() {
 
         signupPage.openSignupPage();
@@ -65,7 +65,7 @@ public class SignupPageTest extends BaseTest {
         } else {
             System.out.println("Wrong page opened in Firefox");
         }
-        driverSetup.firefoxDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+
         return checkEmailBtn;
     }
 
